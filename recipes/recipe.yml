@@ -27,6 +27,7 @@ modules:
       - fcitx5-gtk4
       - fcitx5-chinese-addons
       - fcitx5-configtool
+      - cloud-init
 
   - type: gnome-extensions
     install:
