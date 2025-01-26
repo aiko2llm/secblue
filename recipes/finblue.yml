@@ -27,6 +27,7 @@ modules:
       - fcitx5-chinese-addons
       - fcitx5-configtool
       - cloud-init
+      - waypipe
 
   - type: gnome-extensions
     install:
