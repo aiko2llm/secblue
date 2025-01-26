@@ -28,6 +28,7 @@ modules:
       - fcitx5-configtool
       - cloud-init
       - waypipe
+      - pass
 
   - type: gnome-extensions
     install:
