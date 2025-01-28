@@ -29,6 +29,7 @@ modules:
       - cloud-init
       - waypipe
       - pass
+      - neovim
 
   - type: gnome-extensions
     install:
