@@ -30,6 +30,7 @@ modules:
       - waypipe
       - pass
       - neovim
+      - clang
 
   - type: gnome-extensions
     install:
