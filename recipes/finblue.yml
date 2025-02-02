@@ -31,6 +31,7 @@ modules:
       - pass
       - neovim
       - clang
+      - freerdp
 
   - type: gnome-extensions
     install:
