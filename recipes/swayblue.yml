@@ -33,6 +33,7 @@ modules:
       - clang
       - SDL2 # fix flatpak freerdp
       - wayvnc
+      - sway-systemd
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
