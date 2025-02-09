@@ -31,7 +31,6 @@ jobs:
           - finblue.yml
           - hyprblue.yml
           - swayblue.yml
-          - hyprblue-gdm.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
