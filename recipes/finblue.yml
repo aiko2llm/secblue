@@ -32,6 +32,7 @@ modules:
       - neovim
       - clang
       - SDL2 # fix flatpak freerdp
+      - pprof
 
   - type: gnome-extensions
     install:
