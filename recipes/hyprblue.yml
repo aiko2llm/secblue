@@ -3,10 +3,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: hyprblue
 # description will be included in the image's metadata
-description: Customized image based on wayblue
+description: Customized image based on bluefin
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/wayblueorg/hyprland
+base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: 41 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -36,6 +36,12 @@ modules:
       - qemu-guest-agent
       - roc-toolkit
       - pipewire-module-roc
+      - hyprland
+      - waybar
+      - xdg-desktop-portal-hyprland
+      - hyprpaper
+      - hyprlock
+      - hypridle
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
