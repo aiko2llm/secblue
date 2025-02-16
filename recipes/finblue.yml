@@ -33,6 +33,7 @@ modules:
       - clang
       - SDL2 # fix flatpak freerdp
       - pprof
+      - git-subtree
 
   - type: gnome-extensions
     install:
