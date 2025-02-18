@@ -34,6 +34,7 @@ modules:
       - SDL2 # fix flatpak freerdp
       - pprof
       - git-subtree
+      - podman-docker
 
   - type: gnome-extensions
     install:
