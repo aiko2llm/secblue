@@ -34,6 +34,9 @@ modules:
       - SDL2 # fix flatpak freerdp
       - pprof
       - git-subtree
+      - ffmpeg-free
+      - libavcodec-freeworld
+      - mesa-va-drivers-freeworld
 
   - type: gnome-extensions
     install:
