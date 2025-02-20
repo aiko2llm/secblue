@@ -35,8 +35,8 @@ modules:
       - pprof
       - git-subtree
       - ffmpeg-free
-      - libavcodec-freeworld
-      - mesa-va-drivers-freeworld
+      - libavcodec-free
+      - mesa-va-drivers
 
   - type: gnome-extensions
     install:
