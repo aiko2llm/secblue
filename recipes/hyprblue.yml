@@ -43,8 +43,6 @@ modules:
       - hyprlock
       - hypridle
       - git-subtree
-      - ffmpeg-free
-      - libavcodec-free
       - mesa-va-drivers
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
