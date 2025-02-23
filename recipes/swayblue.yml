@@ -36,7 +36,9 @@ modules:
       - qemu-guest-agent
       - roc-toolkit
       - pipewire-module-roc
+      - sway
       - sway-systemd
+      - fedora-release-sway
       - waybar
       - git-subtree
       - mesa-va-drivers
