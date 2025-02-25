@@ -46,6 +46,7 @@ modules:
       - hypridle
       - git-subtree
       - mesa-va-drivers
+      - tigervnc
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 

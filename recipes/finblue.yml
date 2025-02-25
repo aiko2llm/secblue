@@ -35,6 +35,7 @@ modules:
       - pprof
       - git-subtree
       - mesa-va-drivers
+      - tigervnc
 
   - type: gnome-extensions
     install:
