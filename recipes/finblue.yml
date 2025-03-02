@@ -30,6 +30,7 @@ modules:
       - waypipe
       - pass
       - neovim
+      - fzf
       - clang
       - SDL2 # fix flatpak freerdp
       - pprof
