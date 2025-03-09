@@ -18,6 +18,9 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-stable-fedora-%OS_VERSION%.repo
     install:
       - fcitx5
       - fcitx5-qt
@@ -36,12 +39,13 @@ modules:
       - qemu-guest-agent
       - roc-toolkit
       - pipewire-module-roc
-      - sway
+      - swayfx
       - sway-systemd
       - fedora-release-sway
       - waybar
       - git-subtree
       - mesa-va-drivers
+      - Sunshine
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
