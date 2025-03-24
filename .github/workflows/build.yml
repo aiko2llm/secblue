@@ -28,6 +28,7 @@ jobs:
         recipe:
           # !! Add your recipes here
           - secblue.yml
+          - finblue-beta.yml
           - finblue.yml
           - hyprblue.yml
           - swayblue.yml
