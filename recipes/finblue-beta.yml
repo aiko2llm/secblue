@@ -31,7 +31,7 @@ modules:
       - pass
       - neovim
       - fzf
-      - clang
+      - clang-19.1.7 # Temporary fix for llvm-libs-20.1.1 not found
       - SDL2 # fix flatpak freerdp
       - pprof
       - git-subtree
