@@ -35,7 +35,7 @@ modules:
       - SDL2 # fix flatpak freerdp
       - pprof
       - git-subtree
-      - mesa-va-drivers
+      - mesa-va-drivers-freeworld
       - tigervnc
 
   - type: gnome-extensions
