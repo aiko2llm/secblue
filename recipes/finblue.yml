@@ -35,6 +35,7 @@ modules:
       - fzf
       - clang
       - SDL2 # fix flatpak freerdp
+      - qemu-guest-agent
       - pprof
       - git-subtree
       - mesa-va-drivers # negativo17 already contains freeworld patch

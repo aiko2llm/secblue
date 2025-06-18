@@ -31,6 +31,7 @@ modules:
       - waypipe
       - pass
       - neovim
+      - qemu-guest-agent
       - fzf
       - clang
       - SDL2 # fix flatpak freerdp
