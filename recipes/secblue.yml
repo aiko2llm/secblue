@@ -7,7 +7,7 @@ description: Customized image based on secureblue.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-hardened
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -28,6 +28,15 @@ modules:
       - fcitx5-chinese-addons
       - fcitx5-configtool
       - cloud-init
+      - waypipe
+      - pass
+      - neovim
+      - fzf
+      - clang
+      - SDL2 # fix flatpak freerdp
+      - git-subtree
+      - mesa-va-drivers # negativo17 already contains freeworld patch
+      - ncdu
 
   - type: gnome-extensions
     install:
