@@ -30,6 +30,7 @@ jobs:
           - secblue.yml
           - finblue.yml
           - hyprblue.yml
+          - hyprbluefin.yml
           - swayblue.yml
     steps:
       # the build is fully handled by the reusable github action
