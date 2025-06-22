@@ -6,7 +6,7 @@ name: hyprbluefin
 description: Customized image based on bluefin
 
 # the base image to build on top of (FROM) and the version tag to use
- base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
 #base-image: ghcr.io/ublue-os/bluefin-dx
 #base-image: ghcr.io/secureblue/silverblue-nvidia-open-hardened
 #base-image: ghcr.io/secureblue/silverblue-nvidia-hardened
