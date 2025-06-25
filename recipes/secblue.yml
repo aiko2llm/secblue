@@ -19,6 +19,7 @@ modules:
 
   - type: rpm-ostree
     repos:
+      - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/beta/repo/fedora-%OS_VERSION%/lizardbyte-beta-fedora-%OS_VERSION%.repo
     install:
       - gnome-remote-desktop
@@ -37,6 +38,11 @@ modules:
       - fzf
       - clang
       - SDL2 # fix flatpak freerdp
+      - git-subtree
+      - swayfx
+      - sway-systemd
+      - fedora-release-sway
+      - waybar
       - git-subtree
       - mesa-va-drivers # negativo17 already contains freeworld patch
       - Sunshine
