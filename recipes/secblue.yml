@@ -48,6 +48,7 @@ modules:
       - Sunshine
       - ncdu
       - libva-utils
+      - util-linux-script
 
   - type: gnome-extensions
     install:
