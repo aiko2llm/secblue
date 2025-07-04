@@ -24,14 +24,14 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-fedora-%OS_VERSION%.repo
     install:
       - gnome-remote-desktop
-      - fcitx5
-      - fcitx5-qt
-      - fcitx5-gtk
-      - fcitx5-gtk3
-      - fcitx5-gtk4
-      - fcitx5-chinese-addons
-      - fcitx5-configtool
-      - fcitx5-autostart
+      # - fcitx5
+      # - fcitx5-qt
+      # - fcitx5-gtk
+      # - fcitx5-gtk3
+      # - fcitx5-gtk4
+      # - fcitx5-chinese-addons
+      # - fcitx5-configtool
+      # - fcitx5-autostart
       - cloud-init
       - waypipe
       - pass
