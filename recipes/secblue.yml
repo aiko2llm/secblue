@@ -49,6 +49,7 @@ modules:
       - ncdu
       - libva-utils
       - util-linux-script
+      - tigervnc
 
   - type: gnome-extensions
     install:
