@@ -58,6 +58,7 @@ modules:
       - uwsm
       - hyprpanel
       - satty
+      - libva-nvidia-driver
 
   - type: gnome-extensions
     install:

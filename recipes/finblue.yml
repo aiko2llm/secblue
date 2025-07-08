@@ -43,6 +43,7 @@ modules:
       - Sunshine
       - ncdu
       - util-linux-script
+      - libva-nvidia-driver
 
   - type: gnome-extensions
     install:
