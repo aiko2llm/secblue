@@ -59,6 +59,7 @@ modules:
       - hyprpanel
       - satty
       - libva-nvidia-driver
+      - wayvnc
 
   - type: gnome-extensions
     install:

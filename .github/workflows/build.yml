@@ -29,8 +29,8 @@ jobs:
           # !! Add your recipes here
           - secblue.yml
           - finblue.yml
-          - hyprblue.yml
-          - swayblue.yml
+          #- hyprblue.yml
+          #- swayblue.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
