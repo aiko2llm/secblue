@@ -57,6 +57,7 @@ modules:
       - hypridle
       - uwsm
       - hyprpanel
+      - satty
 
   - type: gnome-extensions
     install:
