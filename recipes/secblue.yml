@@ -51,7 +51,7 @@ modules:
       - tigervnc
       - waybar-git # from hyprland
       - xdg-desktop-portal-hyprland
-      - hyprland
+      - hyprland-git
       - hyprpaper
       - hyprlock
       - hypridle
