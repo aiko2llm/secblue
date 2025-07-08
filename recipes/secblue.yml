@@ -55,6 +55,8 @@ modules:
       - hyprpaper
       - hyprlock
       - hypridle
+      - uwsm
+      - hyprpanel
 
   - type: gnome-extensions
     install:
