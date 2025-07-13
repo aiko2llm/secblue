@@ -22,6 +22,7 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/fedora-%OS_VERSION%/yalter-niri-git-fedora-%OS_VERSION%.repo
     install:
       - gnome-remote-desktop
       # - fcitx5
@@ -60,6 +61,7 @@ modules:
       - satty
       - libva-nvidia-driver
       - wayvnc
+      - niri
 
   - type: gnome-extensions
     install:
