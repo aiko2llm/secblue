@@ -38,10 +38,9 @@ modules:
       - neovim
       - qemu-guest-agent
       - fzf
-      - clang
+      # - clang
       - SDL2 # fix flatpak freerdp
-      - git-subtree
-      # - waybar
+      - SDL3 # fix flatpak freerdp
       - git-subtree
       - mesa-va-drivers # negativo17 already contains freeworld patch
       - Sunshine
@@ -49,18 +48,20 @@ modules:
       - libva-utils
       - util-linux-script
       - tigervnc
+      # - waybar
       - waybar-git # from hyprland
-      - xdg-desktop-portal-hyprland
-      - hyprland-git
-      - hyprpaper
-      - hyprlock
-      - hypridle
+      # - xdg-desktop-portal-hyprland
+      # - hyprland-git
+      # - hyprpaper
+      # - hyprlock
+      # - hypridle
       - uwsm
-      - hyprpanel
+      # - hyprpanel
       - satty
       - libva-nvidia-driver
       - wayvnc
       - niri
+      - parted
 
   - type: gnome-extensions
     install:
