@@ -28,7 +28,7 @@ PRIVATE_KEY_PATH="./certs/private_key.priv"
 SIGNING_KEY="./certs/signing_key.pem"
 cat "$PRIVATE_KEY_PATH" <(echo) "$PUBLIC_KEY_CRT_PATH" >>"$SIGNING_KEY"
 
-for module in /usr/lib/modules/"${KERNEL_VERSION}"/nvidia/"${MODULE_NAME}"/*.ko*; do
+for module in /usr/lib/modules/"${KERNEL_VERSION}"/"${MODULE_NAME}"/*.ko*; do
     module_basename="${module:0:-3}"
     module_suffix="${module: -3}"
     if [[ "$module_suffix" == ".xz" ]]; then
