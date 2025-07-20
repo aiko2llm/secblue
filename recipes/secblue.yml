@@ -17,12 +17,6 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: script
-    scripts:
-      - enablescxservice.sh
-      - signkernel.sh
-      - signnvidia.sh
-
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
@@ -94,6 +88,12 @@ modules:
     install:
       - 261 # kimpanel is required for fcitx5
       - 6099 # paperwm
+
+  - type: script
+    scripts:
+      - enablescxservice.sh
+      - signkernel.sh
+      - signnvidia.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
