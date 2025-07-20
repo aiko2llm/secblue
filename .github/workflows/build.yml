@@ -32,6 +32,13 @@ jobs:
           #- hyprblue.yml
           #- swayblue.yml
     steps:
+      - name: Retrieve Signing Key
+        shell: bash
+        env:
+          KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
+        run: |
+          echo "${KERNEL_PRIVKEY}" > ./files/scripts/certs/private_key.priv
+
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
