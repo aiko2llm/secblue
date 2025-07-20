@@ -37,10 +37,8 @@ modules:
       - kernel-cachyos-devel-matched
       - kernel-cachyos-nvidia-open
       # addons
-      - libcap-ng-devel
-      - procps-ng-devel
       - scx-scheds
-      - cachyos-ksm-settings
+      - cachyos-settings
       - gnome-remote-desktop
       - cloud-init
       - qemu-guest-agent
