@@ -32,6 +32,8 @@ modules:
       - kernel-core
       - kernel-modules
       - kernel-devel-matched
+      # needed for kmod-nvidia from negativo17
+      - kernel-modules-core
       - kernel-modules-extra
       - zram-generator-defaults # conflict with cachyos-settings
       - akmod-nvidia # conflict with kernel-cachyos-nvidia-open
@@ -39,8 +41,6 @@ modules:
       - kernel-cachyos
       - kernel-cachyos-devel-matched
       - kernel-cachyos-nvidia-open
-      # needed for kmod-nvidia from negativo17
-      - kernel-modules-core
       # addons
       - scx-scheds
       - cachyos-settings
