@@ -36,10 +36,14 @@ modules:
       - kernel-cachyos
       - kernel-cachyos-devel-matched
       - kernel-cachyos-nvidia-open
+      # needed for kmod-nvidia from negativo17
       - kernel-modules-core
       # addons
       - scx-scheds
       - cachyos-settings
+      # sign kernel
+      - pesign
+      - keyutils
       - gnome-remote-desktop
       - cloud-init
       - qemu-guest-agent
