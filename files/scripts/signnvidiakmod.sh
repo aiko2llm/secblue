@@ -4,8 +4,8 @@ set -oue pipefail
 
 KERNEL_VERSION="$(rpm -q "kernel-cachyos" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
-dnf install -y "kernel-devel-matched-$(rpm -q 'kernel-cachyos' --queryformat '%{VERSION}')"
-dnf install -y "akmod-nvidia*.fc${RELEASE}"
+dnf install -y "kernel-cachyos-devel-matched-$(rpm -q 'kernel-cachyos' --queryformat '%{VERSION}')"
+dnf install -y "kernel-cachyos-nvidia*.fc${RELEASE}"
 
 akmods --force --kernels "${KERNEL_VERSION}" --kmod "nvidia"
 
