@@ -2,6 +2,8 @@
 
 set -oue pipefail
 
+KERNEL_VERSION="$(rpm -q "kernel-cachyos" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
+
 # Depends on word splitting
 # shellcheck disable=SC2086
 modinfo /usr/lib/modules/${KERNEL_VERSION}/nvidia/nvidia{,-drm,-modeset,-peermem,-uvm}.ko.zst >/dev/null ||
