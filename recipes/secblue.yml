@@ -31,6 +31,9 @@ modules:
       - kernel-modules-core
       - kernel-modules-extra
       - kernel-devel-matched
+      - zram-generator-defaults # conflict with cachyos-settings
+      - kmod-nvidia # required kernel modules-core
+      - akmod-nvidia-3 # conflict with kernel-cachyos-nvidia-open
     install:
       - kernel-cachyos
       - kernel-cachyos-devel-matched
