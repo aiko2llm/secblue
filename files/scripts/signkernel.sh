@@ -17,7 +17,7 @@ set -oue pipefail
 
 KERNEL_VERSION="$(rpm -q "kernel-cachyos" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
-PUBLIC_KEY_DER_PATH="../system/etc/pki/akmods/certs/akmods-secureblue.der"
+PUBLIC_KEY_DER_PATH="../system/etc/pki/akmods/certs/akmods-secblue.der"
 PUBLIC_KEY_CRT_PATH="./certs/public_key.crt"
 PRIVATE_KEY_PATH="./certs/private_key.priv"
 
