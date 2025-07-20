@@ -30,6 +30,7 @@ modules:
       - kernel-modules
       - kernel-modules-core
       - kernel-modules-extra
+      - kernel-devel-mached
     install:
       - kernel-cachyos
       - kernel-cachyos-devel-matched
