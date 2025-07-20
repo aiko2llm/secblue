@@ -20,6 +20,8 @@ modules:
   - type: script
     scripts:
       - enablescxservice.sh
+      - signkernel.sh
+      - signnvidia.sh
 
   - type: rpm-ostree
     repos:
@@ -48,9 +50,6 @@ modules:
       # addons
       - scx-scheds
       - cachyos-settings
-      # sign kernel
-      - pesign
-      - keyutils
       - gnome-remote-desktop
       - cloud-init
       - qemu-guest-agent
