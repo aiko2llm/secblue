@@ -23,8 +23,52 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo
+    remove:
+      - kernel
+      - kernel-core
+      - kernel-modules
+      - kernel-modules-core
+      - kernel-modules-extra
     install:
+      - kernel-cachyos
+      - kernel-cachyos-devel-matched
+      # addons
+      - libcap-ng-devel
+      - procps-ng-devel
+      - scx-scheds
+      - cachyos-ksm-settings
       - gnome-remote-desktop
+      - cloud-init
+      - qemu-guest-agent
+      - waypipe
+      - pass
+      - neovim
+      - fzf
+      # - clang
+      - SDL2 # fix flatpak freerdp
+      - SDL3 # fix flatpak freerdp
+      - git-subtree
+      - mesa-va-drivers # negativo17 already contains freeworld patch
+      - libva-utils
+      - libva-nvidia-driver
+      - Sunshine
+      - ncdu
+      - util-linux-script
+      - tigervnc
+      - wayvnc
+      # - waybar
+      - waybar-git # from hyprland
+      # - xdg-desktop-portal-hyprland
+      # - hyprland-git
+      # - hyprpaper
+      # - hyprlock
+      # - hypridle
+      # - uwsm
+      # - hyprpanel
+      - satty
+      - niri
+      - parted
       # - fcitx5
       # - fcitx5-qt
       # - fcitx5-gtk
@@ -33,38 +77,6 @@ modules:
       # - fcitx5-chinese-addons
       # - fcitx5-configtool
       # - fcitx5-autostart
-      - cloud-init
-      - waypipe
-      - pass
-      - neovim
-      - qemu-guest-agent
-      - fzf
-      # - clang
-      - SDL2 # fix flatpak freerdp
-      - SDL3 # fix flatpak freerdp
-      - git-subtree
-      - mesa-va-drivers # negativo17 already contains freeworld patch
-      - Sunshine
-      - ncdu
-      - libva-utils
-      - util-linux-script
-      - tigervnc
-      # - waybar
-      - waybar-git # from hyprland
-      # - xdg-desktop-portal-hyprland
-      # - hyprland-git
-      # - hyprpaper
-      # - hyprlock
-      # - hypridle
-      - uwsm
-      # - hyprpanel
-      - satty
-      - libva-nvidia-driver
-      - wayvnc
-      - niri
-      - parted
-      - kernel-cachyos
-      - kernel-cachyos-devel-matched
 
   - type: gnome-extensions
     install:
