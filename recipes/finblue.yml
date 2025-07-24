@@ -21,19 +21,18 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/beta/repo/fedora-%OS_VERSION%/lizardbyte-beta-fedora-%OS_VERSION%.repo
     install:
-      - fcitx5
-      - fcitx5-qt
-      - fcitx5-gtk
-      - fcitx5-gtk3
-      - fcitx5-gtk4
-      - fcitx5-chinese-addons
-      - fcitx5-configtool
+      # - fcitx5
+      # - fcitx5-qt
+      # - fcitx5-gtk
+      # - fcitx5-gtk3
+      # - fcitx5-gtk4
+      # - fcitx5-chinese-addons
+      # - fcitx5-configtool
       - cloud-init
       - waypipe
       - pass
       - neovim
       - fzf
-      - clang
       - SDL2 # fix flatpak freerdp
       - qemu-guest-agent
       - pprof
@@ -44,6 +43,11 @@ modules:
       - ncdu
       - util-linux-script
       - libva-nvidia-driver
+      - clang
+      - pkgconf
+      - perl-FindBin
+      - perl-IPC-Cmd
+      - openssl-devel
 
   - type: gnome-extensions
     install:
