@@ -75,6 +75,7 @@ modules:
       - satty
       - niri
       - parted
+      - pipewire-module-roc
       # - fcitx5
       # - fcitx5-qt
       # - fcitx5-gtk
