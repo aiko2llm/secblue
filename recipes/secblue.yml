@@ -61,8 +61,8 @@ modules:
       - Sunshine
       - ncdu
       - util-linux-script
-      - tigervnc
-      - wayvnc
+      # - tigervnc
+      # - wayvnc
       # - waybar
       - waybar-git # from hyprland
       # - xdg-desktop-portal-hyprland
@@ -75,7 +75,7 @@ modules:
       - satty
       - niri
       - parted
-      - pipewire-module-roc
+      # - pipewire-module-roc
       - socat
       # - fcitx5
       # - fcitx5-qt
