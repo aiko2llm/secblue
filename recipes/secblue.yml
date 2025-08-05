@@ -23,7 +23,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-fedora-%OS_VERSION%.repo
       # Also include nvidia-open
-      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
       # lto
       - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
       # https://github.com/CachyOS/copr-linux-cachyos/issues/46
@@ -41,7 +41,7 @@ modules:
     install:
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
-      - kernel-cachyos-nvidia-open
+      - kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
       - kernel-modules-core
       # addons
