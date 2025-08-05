@@ -2,7 +2,7 @@
 
 set -oue pipefail
 
-KERNEL_VERSION="$(rpm -q "kernel-cachyos" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
+KERNEL_VERSION="$(rpm -q "kernel-cachyos-lto" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
 # Depends on word splitting
 # shellcheck disable=SC2086
