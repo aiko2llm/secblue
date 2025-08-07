@@ -99,6 +99,12 @@ modules:
       - enablescxservice.sh
       - signkernel.sh
       - signnvidiakmod.sh
+    secrets:
+      - type: env
+        name: KERNEL_PRIVKEY
+        mount:
+          type: file
+          destination: /tmp/certs/private_key.priv
 
   - type: justfiles
     validate: true
