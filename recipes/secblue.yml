@@ -96,6 +96,10 @@ modules:
 
   - type: script
     scripts:
+      - installxwaylandsatellite
+
+  - type: script
+    scripts:
       - enablescxservice.sh
       - signkernel.sh
       - signnvidiakmod.sh
