@@ -96,7 +96,7 @@ modules:
 
   - type: script
     scripts:
-      - installxwaylandsatellite
+      - installxwaylandsatellite.sh
 
   - type: script
     scripts:
