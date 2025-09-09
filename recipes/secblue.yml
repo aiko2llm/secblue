@@ -56,7 +56,8 @@ modules:
       - neovim
       - fzf
       # - clang
-      - SDL2 # fix flatpak freerdp
+      #- SDL2 # fix flatpak freerdp
+      - sdl2-compat
       - SDL3 # fix flatpak freerdp
       - git-subtree
       - mesa-va-drivers # negativo17 already contains freeworld patch
