@@ -99,12 +99,7 @@ modules:
   - type: script
     scripts:
       - installxwaylandsatellite.sh
-
-  - type: rpm-ostree
-    install:
-      # rio terminal from terra
-      # NOTE: terra repo is installed by xwaylandsatellit above
-      - rio
+      - installrioterm.sh
 
   - type: script
     scripts:
