@@ -25,8 +25,8 @@ modules:
       # Also include nvidia-open
       # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
       # lto
-      #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
+      #- https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
       # https://github.com/CachyOS/copr-linux-cachyos/issues/46
       # Secure Boot module signing
       # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-dev/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-dev-fedora-%OS_VERSION%.repo
