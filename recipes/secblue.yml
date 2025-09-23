@@ -38,13 +38,13 @@ modules:
       - kernel-devel-matched
       - kernel-modules-extra
       - zram-generator-defaults # conflict with cachyos-settings
-      #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
-      #- nvidia-driver # prefer install later, because negativo17
+      - akmod-nvidia # conflict with kernel-cachyos-nvidia-open
+      # rpm -q "nvidia-driver", try to install from terra or rpmfusion
+      - nvidia-driver # prefer install later, because negativo17 isn't updated alone with cachyos-nvidia-open
     install:
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
-      # don't need to bother with mismatch nvidia driver version
-      #- kernel-cachyos-lto-nvidia-open
+      - kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
       - kernel-modules-core
       # addons
@@ -107,8 +107,7 @@ modules:
     scripts:
       - enablescxservice.sh
       - signkernel.sh
-      # Use nvidia kernel don't need to sign again?
-      # - signnvidiakmod.sh
+      - signnvidiakmod.sh
     secrets:
       - type: env
         name: KERNEL_PRIVKEY
