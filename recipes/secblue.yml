@@ -107,7 +107,8 @@ modules:
     scripts:
       - enablescxservice.sh
       - signkernel.sh
-      - signnvidiakmod.sh
+      # Use nvidia kernel don't need to sign again?
+      # - signnvidiakmod.sh
     secrets:
       - type: env
         name: KERNEL_PRIVKEY
