@@ -8,4 +8,4 @@ rpm-ostree install terra-release
 rpm-ostree install xwayland-satellite
 
 # I also want other packages distributed by terra
-#rm -f /etc/yum.repos.d/terra.repo
+rm -f /etc/yum.repos.d/terra.repo
