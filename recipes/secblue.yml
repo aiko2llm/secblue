@@ -38,11 +38,13 @@ modules:
       - kernel-devel-matched
       - kernel-modules-extra
       - zram-generator-defaults # conflict with cachyos-settings
-      - akmod-nvidia # conflict with kernel-cachyos-nvidia-open
+      #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
+      #- nvidia-driver # prefer install later, because negativo17
     install:
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
-      - kernel-cachyos-lto-nvidia-open
+      # don't need to bother with mismatch nvidia driver version
+      #- kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
       - kernel-modules-core
       # addons
@@ -100,7 +102,6 @@ modules:
     scripts:
       - installxwaylandsatellite.sh
       - installrioterm.sh
-      - installnvidiadriver.sh
 
   - type: script
     scripts:
