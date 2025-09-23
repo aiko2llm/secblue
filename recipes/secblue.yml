@@ -25,8 +25,8 @@ modules:
       # Also include nvidia-open
       # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
       # lto
-      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
-      #- https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
+      #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
       # https://github.com/CachyOS/copr-linux-cachyos/issues/46
       # Secure Boot module signing
       # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-dev/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-dev-fedora-%OS_VERSION%.repo
@@ -39,18 +39,19 @@ modules:
       - kernel-modules-extra
       - zram-generator-defaults # conflict with cachyos-settings
       - akmod-nvidia # conflict with kernel-cachyos-nvidia-open
-      # rpm -q "nvidia-driver", try to install from terra or rpmfusion
-      - nvidia-driver # prefer install later, because negativo17 isn't updated alone with cachyos-nvidia-open
-      - nvidia-settings # prefer isntall later
     install:
+      # IMPORTANT: it's annoying to keep nvidia-open kernel module version consistent with nvidia deriver from negativo17
+      # rpm -q "nvidia-driver"
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
       - kernel-cachyos-lto-nvidia-open
+
       # needed for kmod-nvidia from negativo17
       - kernel-modules-core
       # addons
       - scx-scheds
       - cachyos-settings
+
       - gnome-remote-desktop
       - cloud-init
       - qemu-guest-agent
@@ -109,6 +110,7 @@ modules:
       - enablescxservice.sh
       - signkernel.sh
       - signnvidiakmod.sh
+
     secrets:
       - type: env
         name: KERNEL_PRIVKEY
