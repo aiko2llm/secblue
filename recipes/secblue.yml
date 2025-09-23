@@ -41,6 +41,7 @@ modules:
       - akmod-nvidia # conflict with kernel-cachyos-nvidia-open
       # rpm -q "nvidia-driver", try to install from terra or rpmfusion
       - nvidia-driver # prefer install later, because negativo17 isn't updated alone with cachyos-nvidia-open
+      - nvidia-settings # prefer isntall later
     install:
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
