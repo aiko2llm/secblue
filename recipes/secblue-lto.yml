@@ -1,0 +1,125 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: secblue
+# description will be included in the image's metadata
+description: Customized image based on secureblue.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/secureblue/silverblue-nvidia-open-hardened
+image-version: 42 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: rpm-ostree
+    repos:
+      # - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-fedora-%OS_VERSION%.repo
+      # Also include nvidia-open
+      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+      # lto
+      #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
+      # https://github.com/CachyOS/copr-linux-cachyos/issues/46
+      # Secure Boot module signing
+      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-dev/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-dev-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo
+    remove:
+      - kernel
+      - kernel-core
+      - kernel-modules
+      - kernel-devel-matched
+      - kernel-modules-extra
+      - zram-generator-defaults # conflict with cachyos-settings
+      - akmod-nvidia # conflict with kernel-cachyos-nvidia-open
+    install:
+      # rpm -q "nvidia-driver" and better doing `dnf search "nvidia-deriver"` before rpm-ostree update
+      # https://negativo17.org/repos/nvidia/fedora-42/x86_64
+      - kernel-cachyos-lto
+      - kernel-cachyos-lto-devel-matched
+      - kernel-cachyos-lto-nvidia-open
+
+      # needed for kmod-nvidia from negativo17
+      - kernel-modules-core
+      # addons
+      - scx-scheds
+      - cachyos-settings
+
+      - gnome-remote-desktop
+      - cloud-init
+      - qemu-guest-agent
+      - waypipe
+      - pass
+      - neovim
+      - fzf
+      # - clang
+      #- SDL2 # fix flatpak freerdp
+      - sdl2-compat
+      - SDL3 # fix flatpak freerdp
+      - git-subtree
+      - mesa-va-drivers # negativo17 already contains freeworld patch
+      - libva-utils
+      - libva-nvidia-driver
+      - Sunshine
+      - ncdu
+      - util-linux-script
+      # - tigervnc
+      # - wayvnc
+      # - waybar
+      - waybar-git # from hyprland
+      # - xdg-desktop-portal-hyprland
+      # - hyprland-git
+      # - hyprpaper
+      # - hyprlock
+      # - hypridle
+      # - uwsm
+      # - hyprpanel
+      - satty
+      - niri
+      - parted
+      # - pipewire-module-roc
+      - socat
+      # - fcitx5
+      # - fcitx5-qt
+      # - fcitx5-gtk
+      # - fcitx5-gtk3
+      # - fcitx5-gtk4
+      # - fcitx5-chinese-addons
+      # - fcitx5-configtool
+      # - fcitx5-autostart
+
+  - type: gnome-extensions
+    install:
+      - 261 # kimpanel is required for fcitx5
+      - 6099 # paperwm
+
+  - type: script
+    scripts:
+      - installxwaylandsatellite.sh
+      - installrioterm.sh
+
+  - type: script
+    scripts:
+      - enablescxservice.sh
+      - signkernel.sh
+      - signnvidiakmod.sh
+
+    secrets:
+      - type: env
+        name: KERNEL_PRIVKEY
+        mount:
+          type: file
+          destination: /tmp/certs/private_key.priv
+
+  - type: justfiles
+    validate: true
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
