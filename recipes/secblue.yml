@@ -47,7 +47,7 @@ modules:
 
       # IMPORTANT: it's annoying to keep nvidia-open kernel module version consistent with nvidia deriver from negativo17
       # rpm -q "nvidia-driver"
-      # https://negativo17.org/repos/nvidia/fedora-42/x86_64
+      # https://negativo17.org/repos/multimedia/fedora-42/x86_64
       #- kernel-cachyos-lto
       #- kernel-cachyos-lto-devel-matched
       #- kernel-cachyos-lto-nvidia-open
