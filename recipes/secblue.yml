@@ -40,6 +40,11 @@ modules:
       #- zram-generator-defaults # conflict with cachyos-settings
       #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
     install:
+      - kernel-modules-core
+      # addons
+      - scx-scheds
+      #- cachyos-settings
+
       # IMPORTANT: it's annoying to keep nvidia-open kernel module version consistent with nvidia deriver from negativo17
       # rpm -q "nvidia-driver"
       # https://negativo17.org/repos/nvidia/fedora-42/x86_64
@@ -48,10 +53,6 @@ modules:
       #- kernel-cachyos-lto-nvidia-open
 
       # needed for kmod-nvidia from negativo17
-      - kernel-modules-core
-      # addons
-      - scx-scheds
-      #- cachyos-settings
 
       - gnome-remote-desktop
       - cloud-init
