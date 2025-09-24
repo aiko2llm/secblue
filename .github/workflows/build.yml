@@ -27,8 +27,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - secblue-lto.yml
-          #- secblue.yml
+          #- secblue-lto.yml
+          - secblue.yml
           #- finblue.yml
           #- hyprblue.yml
           #- swayblue.yml

@@ -111,7 +111,6 @@ modules:
     scripts:
       - enablescxservice.sh
       - signkernel.sh
-      #- signnvidiakmod.sh
 
     secrets:
       - type: env

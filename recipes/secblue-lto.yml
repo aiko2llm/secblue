@@ -108,7 +108,7 @@ modules:
   - type: script
     scripts:
       - enablescxservice.sh
-      - signkernel.sh
+      - signltokernel.sh
       - signnvidiakmod.sh
 
     secrets:
