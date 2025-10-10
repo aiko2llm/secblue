@@ -1,14 +1,11 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: secblue
 # description will be included in the image's metadata
 description: Customized image based on secureblue.
-
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-nvidia-open-hardened
 image-version: 42 # latest is also supported if you want new updates ASAP
-
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
@@ -16,7 +13,6 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
@@ -45,13 +41,11 @@ modules:
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
       - kernel-cachyos-lto-nvidia-open
-
       # needed for kmod-nvidia from negativo17
       - kernel-modules-core
       # addons
       - scx-scheds
       - cachyos-settings
-
       - gnome-remote-desktop
       - cloud-init
       - qemu-guest-agent
@@ -94,32 +88,25 @@ modules:
       # - fcitx5-chinese-addons
       # - fcitx5-configtool
       # - fcitx5-autostart
-
   - type: gnome-extensions
     install:
       - 261 # kimpanel is required for fcitx5
       - 6099 # paperwm
-
   - type: script
     scripts:
       - installxwaylandsatellite.sh
       - installrioterm.sh
-
   - type: script
     scripts:
       - enablescxservice.sh
       - signltokernel.sh
       - signnvidiakmod.sh
-
     secrets:
       - type: env
         name: KERNEL_PRIVKEY
         mount:
           type: file
           destination: /tmp/certs/private_key.priv
-
   - type: justfiles
     validate: true
-
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
