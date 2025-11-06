@@ -45,7 +45,8 @@ modules:
       # https://negativo17.org/repos/nvidia/fedora-42/x86_64
       - kernel-cachyos-lto
       - kernel-cachyos-lto-devel-matched
-      #- kernel-cachyos-lto-nvidia-open
+      # to fix rpm-ostree requirement for /modules.dep is missing
+      - kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
       #- kernel-modules-core
       # addons
