@@ -5,7 +5,7 @@ name: secblue
 description: Customized image based on secureblue.
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-hardened
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: 43 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
@@ -45,7 +45,7 @@ modules:
       - kernel-cachyos-lto-devel-matched
       #- kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
-      - kernel-modules-core
+      #- kernel-modules-core
       # addons
       - scx-scheds
       - cachyos-settings
