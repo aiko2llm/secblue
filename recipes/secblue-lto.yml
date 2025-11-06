@@ -46,7 +46,7 @@ modules:
       - kernel-cachyos-lto-devel-matched
       #- kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
-      #- kernel-modules-core
+      - kernel-modules-core
       # addons
       - scx-scheds
       - cachyos-settings
