@@ -51,6 +51,8 @@ modules:
       #- kernel-modules-core
       # addons
       - scx-scheds
+      # scx_loader service
+      - scx-tools
       - cachyos-settings
       - gnome-remote-desktop
       - cloud-init
