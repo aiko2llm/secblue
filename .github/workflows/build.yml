@@ -37,7 +37,7 @@ jobs:
           persist-credentials: false
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
-        uses: blue-build/github-action@785ecb253aee6ead01454ed5bd070c2921010602 # v1.9.1
+        uses: blue-build/github-action@5d15e0a48bbb32ca037d023a95c0be5c8082281d # v1.10.0
         env:
           KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
         with:
