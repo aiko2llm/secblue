@@ -105,6 +105,7 @@ modules:
     scripts:
       - installxwaylandsatellite.sh
       - installrioterm.sh
+      - installlibrewolf.sh
   - type: script
     scripts:
       - enablescxservice.sh
