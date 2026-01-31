@@ -68,6 +68,7 @@ modules:
       - git-subtree
       - mesa-va-drivers # negativo17 already contains freeworld patch
       - libva-utils
+      - vulkan-tools
       #- libva-nvidia-driver
       #- Sunshine
       - ncdu
