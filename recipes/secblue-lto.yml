@@ -13,9 +13,6 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-  - type: script
-    scripts:
-      - removenvidiakmod.sh
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
@@ -47,9 +44,8 @@ modules:
       # rpm -q "nvidia-driver" and better doing `dnf search "nvidia-deriver"` before rpm-ostree update
       # https://negativo17.org/repos/nvidia/fedora-42/x86_64
       - kernel-cachyos-lto
-      - kernel-cachyos-lto-devel-matched
+      #- kernel-cachyos-lto-devel-matched
       # to fix rpm-ostree requirement for /modules.dep is missing
-      # NOTE: we can remove /lib/modules/$(uname -r)/nvidia
       #- kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
       #- kernel-modules-core
