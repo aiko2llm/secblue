@@ -33,10 +33,10 @@ modules:
     remove:
       - kernel
       - kernel-core
-      - kernel-modules
+      #- kernel-modules
       # installed on nvidia-open
       #- kernel-devel-matched
-      - kernel-modules-core
+      #- kernel-modules-core
       - kernel-modules-extra
       - zram-generator-defaults # conflict with cachyos-settings
       #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
