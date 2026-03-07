@@ -48,7 +48,7 @@ modules:
       # to fix rpm-ostree requirement for /modules.dep is missing
       #- kernel-cachyos-lto-nvidia-open
       # needed for kmod-nvidia from negativo17
-      #- kernel-modules-core
+      - kernel-modules-core
       # addons
       - scx-scheds
       # scx_loader service
