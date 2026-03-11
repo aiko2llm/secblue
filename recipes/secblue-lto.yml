@@ -43,7 +43,6 @@ modules:
     #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
 
     install:
-      - wget
       # rpm -q "nvidia-driver" and better doing `dnf search "nvidia-deriver"` before rpm-ostree update
       # https://negativo17.org/repos/nvidia/fedora-42/x86_64
       #- kernel-cachyos-lto
@@ -109,21 +108,22 @@ modules:
       - 6099 # paperwm
   - type: script
     scripts:
-      - installcachyoskernel.sh
+      #- installcachyoskernel.sh
       - installxwaylandsatellite.sh
       - installrioterm.sh
       #- installlibrewolf.sh
-  - type: script
-    scripts:
-      - enablescxservice.sh
-      - signltokernel.sh
-      #- signnvidiakmod.sh
-    secrets:
-      - type: env
-        name: KERNEL_PRIVKEY
-        mount:
-          type: file
-          destination: /tmp/certs/private_key.priv
   - type: justfiles
+    # - type: script
+    #   scripts:
+    #     - enablescxservice.sh
+    #     - signltokernel.sh
+    #     #- signnvidiakmod.sh
+    #   secrets:
+    #     - type: env
+    #       name: KERNEL_PRIVKEY
+    #       mount:
+    #         type: file
+    #         destination: /tmp/certs/private_key.priv
+
     validate: true
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
