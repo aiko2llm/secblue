@@ -22,24 +22,25 @@ modules:
       # ghostty
       - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
       # Also include nvidia-open
-#     - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
-      # lto
-      #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
-      #- https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
-      # https://github.com/CachyOS/copr-linux-cachyos/issues/46
-      # Secure Boot module signing
-      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-dev/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-dev-fedora-%OS_VERSION%.repo
-#     - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo
-    remove:
-#     - kernel
-#     - kernel-core
-#     - kernel-modules
-      # installed on nvidia-open
-      #- kernel-devel-matched
-#     - kernel-modules-core
-#     - kernel-modules-extra
-#     - zram-generator-defaults # conflict with cachyos-settings
-      #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
+    #     - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+    # lto
+    #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
+    #- https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
+    # https://github.com/CachyOS/copr-linux-cachyos/issues/46
+    # Secure Boot module signing
+    # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-dev/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-dev-fedora-%OS_VERSION%.repo
+    #     - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo
+    #   remove:
+    #     - kernel
+    #     - kernel-core
+    #     - kernel-modules
+    # installed on nvidia-open
+    #- kernel-devel-matched
+    #     - kernel-modules-core
+    #     - kernel-modules-extra
+    #     - zram-generator-defaults # conflict with cachyos-settings
+    #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
+
     install:
       - wget
       # rpm -q "nvidia-driver" and better doing `dnf search "nvidia-deriver"` before rpm-ostree update
@@ -52,10 +53,11 @@ modules:
       # needed for kmod-nvidia from negativo17
       #- kernel-modules-core
       # addons
-#     - scx-scheds
+
+      #     - scx-scheds
       # scx_loader service
-#     - scx-tools
-#     - cachyos-settings
+      #     - scx-tools
+      #     - cachyos-settings
       - gnome-remote-desktop
       - cloud-init
       - qemu-guest-agent
