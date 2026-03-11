@@ -41,10 +41,9 @@ modules:
 #     - zram-generator-defaults # conflict with cachyos-settings
       #- akmod-nvidia # conflict with kernel-cachyos-nvidia-open
     install:
+      - wget
       # rpm -q "nvidia-driver" and better doing `dnf search "nvidia-deriver"` before rpm-ostree update
       # https://negativo17.org/repos/nvidia/fedora-42/x86_64
-#     - kernel-cachyos
-#     - kernel-cachyos-devel-matched
       #- kernel-cachyos-lto
       #- kernel-cachyos-lto-devel-matched
       # to fix rpm-ostree requirement for /modules.dep is missing
