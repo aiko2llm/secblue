@@ -22,7 +22,7 @@ modules:
       # ghostty
       - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
       # Also include nvidia-open
-       - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
       # lto
       #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
       #- https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
