@@ -22,9 +22,9 @@ modules:
       # ghostty
       - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
       # Also include nvidia-open
-      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
+       - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
       # lto
-      - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
+      #- https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-lto-fedora-%OS_VERSION%.repo
       #- https://copr.fedorainfracloud.org/coprs/chaosbuild/cachyos-kernel-lto/repo/fedora-%OS_VERSION%/chaosbuild-cachyos-kernel-lto-fedora-%OS_VERSION%.repo
       # https://github.com/CachyOS/copr-linux-cachyos/issues/46
       # Secure Boot module signing
@@ -43,10 +43,12 @@ modules:
     install:
       # rpm -q "nvidia-driver" and better doing `dnf search "nvidia-deriver"` before rpm-ostree update
       # https://negativo17.org/repos/nvidia/fedora-42/x86_64
-      - kernel-cachyos-lto
-      - kernel-cachyos-lto-devel-matched
+      - kernel-cachyos
+      - kernel-cachyos-devel-matched
+      #- kernel-cachyos-lto
+      #- kernel-cachyos-lto-devel-matched
       # to fix rpm-ostree requirement for /modules.dep is missing
-      - kernel-cachyos-lto-nvidia-open
+      #- kernel-cachyos-lto-nvidia-open
       #- kernel-headers
       # needed for kmod-nvidia from negativo17
       #- kernel-modules-core
