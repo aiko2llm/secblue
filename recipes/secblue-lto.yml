@@ -73,6 +73,7 @@ modules:
       - mesa-va-drivers # negativo17 already contains freeworld patch
       - libva-utils
       - vulkan-tools
+      - pavucontrol
       #- libva-nvidia-driver
       #- Sunshine
       - ncdu
