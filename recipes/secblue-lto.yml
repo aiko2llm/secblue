@@ -87,7 +87,7 @@ modules:
       # - hypridle
       # - uwsm
       # - hyprpanel
-      - satty
+      #- satty
       - niri
       - parted
       - pipewire-module-roc
