@@ -51,9 +51,9 @@ modules:
       # needed for kmod-nvidia from negativo17
       # - kernel-modules-core
       # addons
-      # - scx-scheds
+      - scx-scheds
       # scx_loader service
-      # - scx-tools
+      - scx-tools
       # - cachyos-settings
       - gnome-remote-desktop
       - cloud-init
