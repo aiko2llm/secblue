@@ -27,6 +27,7 @@ jobs:
           # !! Add your recipes here
           - secblue-nvidia.yml
           - secblue-lto.yml
+          - secblue.yml
           #- finblue.yml
           #- hyprblue.yml
           #- swayblue.yml

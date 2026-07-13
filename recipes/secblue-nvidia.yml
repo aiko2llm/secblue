@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: secblue
+name: secblue-nvidia
 # description will be included in the image's metadata
 description: Customized image based on secureblue.
 # the base image to build on top of (FROM) and the version tag to use
